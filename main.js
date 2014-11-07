@@ -34,7 +34,7 @@ $(document).ready(function() {
     dataType: 'JSON' 
   })
   .done(function(results) {
-    console.log("here is the user I just created, click on the triangle to expand");
+    console.log("here is another user I just created, click on the triangle to expand");
     console.table(results);
   });
 
