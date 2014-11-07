@@ -11,6 +11,7 @@ $(document).ready(function() {
     // the attributes have to match your database schema
     // by default, you need to specify the model manually - in this case, user
     // so {user: {name, about, email} } instead of just {name, about, email}
+    // but if you are using a serializer, this behavior may be different depending on how you set up the serializer
     // make sure that in your controller, you have params set to allow this info (aka 'strong params')
     // usually this is a private method with params.require(:user).permit(:name, :about, :email)
     contentType: 'application/json',
