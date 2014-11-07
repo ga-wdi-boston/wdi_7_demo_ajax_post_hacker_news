@@ -40,6 +40,19 @@ $(document).ready(function() {
     // and either pass in 'results' as the argument to those functions
     // or assign 'results' to a property of an existing Javascript object
   });
+  
+  // the same POST request as above, but without all the comments
+  $.ajax({
+    url: 'http://ig-hacker-news.herokuapp.com/users',
+    type: 'POST',
+    data: {user: {name: 'steve jobs', about: 'god or anti-god?', email: 'steve@apple.com'}}, 
+    contentType: 'application/json',
+    dataType: 'JSON' 
+  })
+  .done(function(results) {
+    console.log("here is the user I just created, click on the triangle to expand");
+    console.table(results);
+  });
 
   $.ajax({
     url: 'http://ig-hacker-news.herokuapp.com/users',
