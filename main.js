@@ -14,21 +14,6 @@ $(document).ready(function() {
     // but if you are using a serializer, this behavior may be different depending on how you set up the serializer
     // make sure that in your controller, you have params set to allow this info (aka 'strong params')
     // usually this is a private method with params.require(:user).permit(:name, :about, :email)
-    contentType: 'application/json',
-    // the contentType is important for CORS (cross-origin resource sharing) to work
-    // instead of specifying this for every single AJAX request, you can specify it globally:
-    // $.ajaxSetup({
-    //    contentType: 'application/json'
-    // });
-    // also make sure that in your Rails API Gemfile you have the following line:
-    // gem 'rack-cors', :require => 'rack/cors'
-    // and in your application.rb you have the following code: 
-    // config.middleware.use Rack::Cors do
-    //  allow do
-    //    origins '*'
-    //    resource '*', :headers => :any, :methods => [:get, :post, :put, :delete, :options]
-    //  end
-    // end
     dataType: 'JSON' 
     // dataType here refers to what is being RETURNED from the POST request, not what's being sent
   })
@@ -46,7 +31,6 @@ $(document).ready(function() {
     url: 'http://ig-hacker-news.herokuapp.com/users',
     type: 'POST',
     data: {user: {name: 'steve jobs', about: 'god or anti-god?', email: 'steve@apple.com'}}, 
-    contentType: 'application/json',
     dataType: 'JSON' 
   })
   .done(function(results) {
