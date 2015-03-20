@@ -6,7 +6,8 @@ This demo uses Ilja's Hacker News Rails API. If that repo changes, the demo may 
 
 Currently the API only accepts the following requests: 
 * GET requests to http://ig-hacker-news.herokuapp.com/users
-* POST requests to http://ig-hacker-news.herokuapp.com/users in the format `data: {user: {name: "Alyssa P. Hacker", email: "alyssa@hacker.com", about: "1337 h4xx0r sk1llz"} }` 
+* POST requests to http://ig-hacker-news.herokuapp.com/users in the format  
+`data: {user: {name: "Alyssa P. Hacker", email: "alyssa@hacker.com", about: "1337 h4xx0r sk1llz"} }` 
 * GET requests to http://ig-hacker-news.herokuapp.com/submissions
 * GET requests to http://ig-hacker-news.herokuapp.com/comments
 
